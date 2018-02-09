@@ -1,0 +1,41 @@
+Last login: Fri Dec 15 19:35:43 on ttys000
+Aakash:~ admin$ cd Desktop
+Aakash:Desktop admin$ gcc -o client Client.c
+Aakash:Desktop admin$ ./client 127.0.0.1 1070 4
+
+connect() failed: Connection refused
+Command Sent: 127.0.0.1 1070 4Aakash:Desktop admin$ ./client 127.0.0.1 1080 4
+
+Command Sent: 127.0.0.1 1080 4
+Received: www.google.com 4 
+Aakash:Desktop admin$ ./client 127.0.0.1 1080 5
+
+Command Sent: 127.0.0.1 1080 5
+Received: www.reddit.com 0 www.twitter.com 0 
+Aakash:Desktop admin$ Command Sent: 127.0.0.1 1080 1 www.abcd.com
+/usr/bin/Command: line 4: Sent:: command not found
+Aakash:Desktop admin$ Command Sent: 127.0.0.1 1080 1 www.amazon.com
+/usr/bin/Command: line 4: Sent:: command not found
+Aakash:Desktop admin$ Command Sent: 127.0.0.1 1080 1 www.google.com
+/usr/bin/Command: line 4: Sent:: command not found
+Aakash:Desktop admin$ ./client 127.0.0.1 1080 1 www.amazon.com
+
+Command Sent: 127.0.0.1 1080 1 www.amazon.com
+Received: 72.21.211.176
+Aakash:Desktop admin$ ./client 127.0.0.1 1080 2 www.ebay.com 10.125.6.138
+
+Command Sent to server: 127.0.0.1 1080 2 www.ebay.com 10.125.6.138
+Received: New IP added for www.ebay.com
+Aakash:Desktop admin$ ./client 127.0.0.1 1080 3 www.imgur.com
+
+Command Sent: 127.0.0.1 1080 3 www.imgur.com
+Received: www.imgur.com deleted from the linked list
+Aakash:Desktop admin$ ./client 127.0.0.3A 4
+
+		Incorrect number of command line arguments for the request.Aakash:Desktop admin$ ./client 127.0.0.1 1080 6 Aakash
+Incorrect request code entered. Please enter correct code.: Undefined error: 0
+Aakash:Desktop admin$ ./client 127.0.0.1 1080 6 Aakash
+
+Command Sent: 127.0.0.1 1080 6 Aakash
+Received: Server is going down. Connection will be lost!!
+Aakash:Desktop admin$ 

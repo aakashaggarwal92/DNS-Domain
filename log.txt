@@ -1,0 +1,8 @@
+www.ebay.com 0 10.125.6.138
+www.youtube.com 1 74.125.65.91
+www.google.com 4 172.217.11.174
+www.reddit.com 0 72.247.244.88
+www.amazon.com 3 72.21.211.176
+www.umd.edu 1 128.8.237.77
+www.facebook.com 2 10.12.12.13 
+www.twitter.com 0 98.34.12.10

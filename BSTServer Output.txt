@@ -1,0 +1,10 @@
+Fri Dec 15 19:46:18 2017
+ www.ebay.com  10.125.6.138 record added by client 127.0.0.1  
+Fri Dec 15 19:47:23 2017
+  the ip address for www.facebook.com is  10.12.12.13 requested by 127.0.0.1 
+Fri Dec 15 19:49:12 2017
+  the ip address for www.facebook.com is  10.12.12.13 requested by 127.0.0.1 
+Fri Dec 15 19:50:43 2017
+ www.twitter.com  98.34.12.10 record added by client 127.0.0.1  
+Fri Dec 15 19:51:09 2017
+  shutdown requested by 127.0.0.1

@@ -1,0 +1,113 @@
+Last login: Fri Dec 15 19:04:37 on ttys000
+Aakash:~ admin$ cd Desktop
+Aakash:Desktop admin$ gcc -o server ListServer.c
+Aakash:Desktop admin$ ./server 1080 log.txt 100
+
+		IP Doisser listening on Port Number is: 1080
+
+		www.youtube.com 1 74.125.65.91
+		www.google.com 4 172.217.11.174
+		www.imgur.com 1 173.231.140.219
+		www.reddit.com 0 72.247.244.88
+		www.amazon.com 2 72.21.211.176
+		www.umd.edu 1 128.8.237.77
+		www.facebook.com 2 10.12.12.13 
+		www.twitter.com 0 98.34.12.10
+
+		File opened and read successfully
+
+		Welcome to the DNS Doisser System 		
+
+		Request Code 		Action
+			1. 			Find IP for a domain
+			2. 			Add a record to the list
+			3. 			Delete a record from the list
+			4. 			Report the most requested record(s)
+			5. 			Report the least requested record(s)
+			6. 			Shutdown
+
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+		Entered TCP handler for 127.0.0.1 
+
+		Incoming request from client  127.0.0.1 : Most requested domain
+
+		DNS Dossier will present at most 3 most requested domains in case of tie b/w counts
+
+		Sent Response to the Client: www.google.com 4 
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+		Entered TCP handler for 127.0.0.1 
+
+		Incoming request from client  127.0.0.1 : Least requested domain
+
+		DNS Dossier will present at most 3 Least requested domains in case of tie b/w counts
+
+		Sent Response to the Client: www.reddit.com 0 www.twitter.com 0 
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+		Entered TCP handler for 127.0.0.1 
+
+		Incoming request from client  127.0.0.1 : Search IP for domain www.amazon.com
+
+		Match Found		www.amazon.com 2 72.21.211.176
+		Sent Response to the Client: 72.21.211.176
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+		Entered TCP handler for 127.0.0.1 
+
+		Incoming request from client  127.0.0.1 : Add domain www.ebay.com 10.125.6.138
+
+		New Domain added :www.ebay.com 
+
+		Sent Response to the Client: New IP added for www.ebay.com
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+		Entered TCP handler for 127.0.0.1 
+
+		Incoming request from client  127.0.0.1 : Delete domain www.imgur.com
+
+		New Head after deletion is www.ebay.com 10.125.6.138
+
+		Sent Response to the Client: www.imgur.com deleted from the linked list
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+		Entered TCP handler for 127.0.0.1 
+
+		Incoming request from client  127.0.0.1 : Shutdown DNS Dossier
+
+		Security code verified
+
+		Saving LinkedList into the file
+
+		Location is :log.txt
+
+		Linked List written to the File
+
+		Sent Response to the Client: Server is going down. Connection will be lost!!
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+		Closing Client Socket
+		Closing Server listening socketAakash:Desktop admin$ 
