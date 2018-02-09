@@ -30,39 +30,39 @@ Request code   Action<br />
            5   Report the least requested record(s)<br />
            6   Shut down<br />
            <br />
-Server Side
---------------   Command Line argument format description   ---------
-1. To compile the server                      : gcc -o server Server.c
-2. To execute the server                      : ./server <port number> <file_name.txt> <timer_in_seconds*10)
-                      
-Some of the requests need extra parameters which will follow the third parameter. 
-Here are some examples (assume that the .exe file name is client):
-Client Side
---------------   Command Line argument format description   ---------
-1. To compile the client                      : gcc -o client Client.c
-2. To execute the client                      : ./client <port number> <Request code> <Optional Argument>
-3. To search for an IP against a URL          : ./client 1070 1 www.abcd.com
-4. To add a new entry to file                 : ./client 127.0.0.1 1070 2 www.ebay.com 10.125.6.138
-5. To delete a record fron the list           : ./client 127.0.0.1 1070 3 www.abcd.com
-6. To get the most requested record           : ./client 127.0.0.1 1070 4
-7. To get the least requested record          : ./client 127.0.0.1 1070 5
-8. To shut down the server using code         : ./client 127.0.0.1 1070 6 <SECURITY_CODE>
-
-The last command (shut down) is only executed if the request is followed by a predetermined security code. Upon shut down changes to the list are written into the data file. Both client and server detect errors in the input and respond properly. Error checking is done either at the client or the server side. If you check for the input errors at the server side, the server transmits appropriate error message to the client should an error occur. The following are some errors that the application handles:
-
-• Number of command line parameters is not enough for the request
-• The record to be deleted does not exist
-• The record to be added already exists
-• The IP address format is wrong (e.g. 999.888.123.3 is not a valid IP address)
-• Another inquiry had been made 6 seconds ago, wait 10 seconds before another submission
-
-Note that the program is case insensitive (i.e. www.ebay.com and www.eBay.com are the same)
-
-A binary search tree server is implemented to improve the performance over a linked list.
-
-A log file is generated for all the events that occur on the server side. Each line in the log file starts with a date and time, and provides detailed information for the event. 
-The following shows an example: 
-2011/12/8 5:30 (“www.test.com” , “123.2.3.45”) added by client 64.2.1.56 
-2011/12/8 5:32 request for shutting down the server from client 64.2.1.56 failed 
-2011/12/8 18:32 Server shut down by the client 128.2.132.54
+Server Side<br />
+--------------   Command Line argument format description   ---------<br />
+1. To compile the server                      : gcc -o server Server.c<br />
+2. To execute the server                      : ./server <port number> <file_name.txt> <timer_in_seconds*10)<br />
+ <br />                     
+Some of the requests need extra parameters which will follow the third parameter. <br />
+Here are some examples (assume that the .exe file name is client):<br />
+Client Side<br />
+--------------   Command Line argument format description   ---------<br />
+1. To compile the client                      : gcc -o client Client.c<br />
+2. To execute the client                      : ./client <port number> <Request code> <Optional Argument><br />
+3. To search for an IP against a URL          : ./client 1070 1 www.abcd.com<br />
+4. To add a new entry to file                 : ./client 127.0.0.1 1070 2 www.ebay.com 10.125.6.138<br />
+5. To delete a record fron the list           : ./client 127.0.0.1 1070 3 www.abcd.com<br />
+6. To get the most requested record           : ./client 127.0.0.1 1070 4<br />
+7. To get the least requested record          : ./client 127.0.0.1 1070 5<br />
+8. To shut down the server using code         : ./client 127.0.0.1 1070 6 <SECURITY_CODE><br />
+<br />
+The last command (shut down) is only executed if the request is followed by a predetermined security code. Upon shut down changes to the list are written into the data file. Both client and server detect errors in the input and respond properly. Error checking is done either at the client or the server side. If you check for the input errors at the server side, the server transmits appropriate error message to the client should an error occur. The following are some errors that the application handles:<br />
+<br />
+• Number of command line parameters is not enough for the request<br />
+• The record to be deleted does not exist<br />
+• The record to be added already exists<br />
+• The IP address format is wrong (e.g. 999.888.123.3 is not a valid IP address)<br />
+• Another inquiry had been made 6 seconds ago, wait 10 seconds before another submission<br />
+<br />
+Note that the program is case insensitive (i.e. www.ebay.com and www.eBay.com are the same)<br />
+<br />
+A binary search tree server is implemented to improve the performance over a linked list.<br />
+<br />
+A log file is generated for all the events that occur on the server side. Each line in the log file starts with a date and time, and provides detailed information for the event.<br /> 
+The following shows an example: <br />
+2011/12/8 5:30 (“www.test.com” , “123.2.3.45”) added by client 64.2.1.56 <br />
+2011/12/8 5:32 request for shutting down the server from client 64.2.1.56 failed <br />
+2011/12/8 18:32 Server shut down by the client 128.2.132.54<br />
 
