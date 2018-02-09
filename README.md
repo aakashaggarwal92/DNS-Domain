@@ -3,32 +3,33 @@ A client and a server application which communicates based on TCP/IP protocol. T
 
 
 The Application consists of two parts, a client and a server which communicate based on TCP/IP protocol. The server uses a text file fostering the domain and IP database. In the text file each row shows a domain name as well as number of times that the record has been requested followed by the IP address(es) which correspond to that domain. 
-Sample content of the text file is as follows:
+Sample content of the text file is as follows:<br />
 <br />
 www.yahoo.com 5 98.138.253.109 206.190.36.45 98.139.183.24<br />
 www.google.com 0 64.233.169.99<br />
 www.umd.edu 15 128.8.237.77<br />
 
 When the server starts, it reads the data from the file into linked list. Server is capable of performing following tasks:
-1. Return the IP address(es) for a domain
-        a. If the IP address exists in the data file, it will be returned. In case of multiple addresses all must be returned.
-        b. If the IP address does not exist, the server tries to find and add it to the database (hint: use gethostbyname()).
-        c. If nothing is found, appropriate message is communicated
-2. Keep track of number of requests for each record
-3. Add new record to the list
-4. Delete a record from the list
-5. Reject inquiry if another inquiry has been received from the originated address in the last X seconds.
-
+1. Return the IP address(es) for a domain<br />
+        a. If the IP address exists in the data file, it will be returned. In case of multiple addresses all must be returned.<br />
+        b. If the IP address does not exist, the server tries to find and add it to the database (hint: use gethostbyname()).<br />
+        c. If nothing is found, appropriate message is communicated<br />
+2. Keep track of number of requests for each record<br />
+3. Add new record to the list<br />
+4. Delete a record from the list<br />
+5. Reject inquiry if another inquiry has been received from the originated address in the last X seconds.<br />
+<br />
 The server receives port number, data file name and accepted time gap between multiple requests (in seconds) as command line parameters.
 The client uses command line arguments to communicate with the server. The first command line parameter is the server IP and the second parameter is the port number. The third parameter specifies the type of request from the server and can have the following values:
-
-Request code   Action
-           1   Find IP for a domain
-           2   Add a record to the list
-           3   Delete a record from the list
-           4   Report the most requested record(s)
-           5   Report the least requested record(s)
-           6   Shut down
+<br />
+Request code   Action<br />
+           1   Find IP for a domain<br />
+           2   Add a record to the list<br />
+           3   Delete a record from the list<br />
+           4   Report the most requested record(s)<br />
+           5   Report the least requested record(s)<br />
+           6   Shut down<br />
+           <br />
 Server Side
 --------------   Command Line argument format description   ---------
 1. To compile the server                      : gcc -o server Server.c
