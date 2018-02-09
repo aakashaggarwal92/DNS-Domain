@@ -32,13 +32,16 @@ Request code   Action<br />
            <br />
 Server Side<br />
 --------------   Command Line argument format description   ---------<br />
+<br />
 1. To compile the server                      : gcc -o server Server.c<br />
 2. To execute the server                      : ./server <port number> <file_name.txt> <timer_in_seconds*10)<br />
- <br />                     
+ <br />
+ <br />
 Some of the requests need extra parameters which will follow the third parameter. <br />
 Here are some examples (assume that the .exe file name is client):<br />
 Client Side<br />
 --------------   Command Line argument format description   ---------<br />
+<br />
 1. To compile the client                      : gcc -o client Client.c<br />
 2. To execute the client                      : ./client <port number> <Request code> <Optional Argument><br />
 3. To search for an IP against a URL          : ./client 1070 1 www.abcd.com<br />
@@ -47,6 +50,7 @@ Client Side<br />
 6. To get the most requested record           : ./client 127.0.0.1 1070 4<br />
 7. To get the least requested record          : ./client 127.0.0.1 1070 5<br />
 8. To shut down the server using code         : ./client 127.0.0.1 1070 6 <SECURITY_CODE><br />
+<br />
 <br />
 The last command (shut down) is only executed if the request is followed by a predetermined security code. Upon shut down changes to the list are written into the data file. Both client and server detect errors in the input and respond properly. Error checking is done either at the client or the server side. If you check for the input errors at the server side, the server transmits appropriate error message to the client should an error occur. The following are some errors that the application handles:<br />
 <br />
