@@ -4,7 +4,7 @@ A client and a server application which communicates based on TCP/IP protocol. T
 
 The Application consists of two parts, a client and a server which communicate based on TCP/IP protocol. The server uses a text file fostering the domain and IP database. In the text file each row shows a domain name as well as number of times that the record has been requested followed by the IP address(es) which correspond to that domain. 
 Sample content of the text file is as follow:
-
+<br />
 www.yahoo.com 5 98.138.253.109 206.190.36.45 98.139.183.24
 www.google.com 0 64.233.169.99
 www.umd.edu 15 128.8.237.77
